@@ -1,4 +1,4 @@
-# Aula 05 - Introdução ao Python: Sub-rotinas e Módulos
+#Módulo: Permite importar subrotinas, variáveis e funções
 
 def soma(op1, op2):
     """
@@ -18,5 +18,13 @@ def divisao(dividendo, divisor):
     """
     return  dividendo/divisor
 
-print(soma(1.75,2))
-print(divisao(50, 2.75))
+lista = [x**2 for x in range(0,10)] #Anotação pythonica : Eleva os números da sequência ao quadrado
+
+if __name__ == "__main__": #Não são executadas quando se utiliza o import
+    import sys
+    if sys.argv[3] == "+":
+        print(soma(float(sys.argv[1]), float(sys.argv[1])))
+    elif sys.argv[3] == "+":
+        print(divisao(float(sys.argv[1]), float(sys.argv[1])))
+    else:
+        print("Operação inválida")
